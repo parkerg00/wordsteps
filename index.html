@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Word Steps</title>
+    <style>
+        body { margin: 0; background: #000; }
+        #game-canvas { width: 1400px; height: 800px; }
+    </style>
+</head>
+    <body>
+
+        <h1 style="color:white;">Word Steps</h1>
+
+        <canvas id="game-canvas" class="emscripten"
+                oncontextmenu="event.preventDefault()"
+                tabindex="-1">
+        </canvas>
+
+        <p style="color:white; margin-left: 10px; margin-top: 10px;">How to play:
+            <br>&#x2022; Make 5 letter words on each step, then 3 letter words on each side
+            <br>&#x2022; You cannot repeat words
+            <br>&#x2022; Get the most words possible
+            <br><br>Controls:
+            <br>&#x2022; Just type words to start making the steps
+            <br>&#x2022; Right click to move around
+            <br>&#x2022; Backspace to go back on words
+            <br>&#x2022; press DELETE to restart
+        </p>
+
+        <script>
+            var Module = {
+                canvas: document.getElementById("game-canvas")
+            };
+        </script>
+
+        <script src="game.js"></script>
+
+    </body>
+</html>
